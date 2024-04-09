@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Fonts */
+  --header-font: "Sora";
+  --main-font: "Poppins";
+
+  /* Colors */
+  --primary-color: #ff5b2e;
+  --primary-color-heading: #000958;
+  --primary-color-text: #656689;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: var(--main-font), sans-serif;
+}
+
+.container {
+  width: 1440px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
