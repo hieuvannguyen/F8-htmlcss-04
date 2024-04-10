@@ -11,6 +11,18 @@
   --primary-color: #ff5b2e;
   --primary-color-heading: #000958;
   --primary-color-text: #656689;
+
+  /* Staff */
+  --staff-bg: ;
+  --staff-url: ;
+  --staff-1-bg: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
+  --staff-2-bg: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
+  --staff-3-bg: linear-gradient(180deg, #fabf3e 0%, #ffa14a 100%);
+  --staff-4-bg: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
+  --staff-1-url: url(../img/mem-1.svg);
+  --staff-2-url: url(../img/mem-2.svg);
+  --staff-3-url: url(../img/mem-3.svg);
+  --staff-4-url: url(../img/mem-4.svg);
 }
 
 html {
