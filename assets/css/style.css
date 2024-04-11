@@ -648,12 +648,18 @@
 }
 .staff__item-wrap::before {
   position: absolute;
-  content: var(--staff-url);
+  content: "";
+  width: calc(100% + 36px);
+  height: 100%;
   left: 50%;
   transform: translateX(-50%);
+  background-image: var(--staff-url);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
 }
 .staff__item:nth-child(even) .staff__item-wrap::before {
-  bottom: 157px;
+  top: -57.5%;
 }
 .staff__item:nth-child(odd) .staff__item-wrap::before {
   bottom: 0;
@@ -664,7 +670,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 266px;
+  height: 95%;
   border-radius: inherit;
   background: var(--staff-bg);
 }
@@ -686,9 +692,9 @@
 }
 .staff__item-name {
   margin-top: 14px;
+  font-family: var(--header-font);
   color: var(--primary-color-heading);
   text-align: center;
-  font-family: var(--header-font);
   font-size: 2.2rem;
   font-style: normal;
   font-weight: 600;
@@ -696,4 +702,156 @@
 }
 .staff__btn {
   margin-top: 48px;
+}
+
+/* Pricing */
+.pricing {
+  padding: 86px 0;
+  background: #fff6ed;
+}
+.pricing__frame {
+}
+.pricing__heading,
+.pricing__desc {
+  text-align: center;
+}
+
+.pricing__desc {
+  width: 709px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.pricing__switch-wrap {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+}
+.pricing__switch-input {
+}
+.pricing__switch-label {
+  position: relative;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 276px;
+  height: 56px;
+  border-radius: 31px;
+  border: 1px solid #ff5b2e99;
+  cursor: pointer;
+  user-select: none;
+}
+
+.pricing__switch-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 145px;
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: inherit;
+  transition: 0.7s;
+}
+.pricing__switch-label:active::before {
+  width: 150px;
+}
+
+.pricing__switch-input:checked + .pricing__switch-label::before {
+  left: 100%;
+  transform: translateX(-100%);
+  right: 0;
+  width: 131px;
+}
+.pricing__switch-input:checked + .pricing__switch-label .pricing__switch-value:nth-child(1),
+.pricing__switch-input:not(:checked) + .pricing__switch-label .pricing__switch-value:nth-child(2) {
+  color: var(--primary-color);
+}
+.pricing__switch-value {
+  color: #fff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1; /* 100% */
+  position: relative;
+  transition: 0.3s;
+}
+
+.pricing__switch-inner {
+  position: relative;
+}
+.pricing__sale-off {
+  position: absolute;
+  right: -110px;
+  top: 5px;
+}
+
+.pricing__list {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 44px;
+}
+.pricing-item {
+  background: #fff;
+  padding: 30px 28px;
+  border-radius: 20px;
+}
+.pricing-item:hover {
+  box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
+}
+.pricing-item__type {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1; /* 100% */
+}
+.pricing-item__heading {
+  margin-top: 8px;
+  color: #3f4065;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+}
+.pricing-item__price {
+  margin-top: 34px;
+  font-family: var(--header-font);
+  color: var(--primary-color-heading);
+  font-size: 3.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+}
+.pricing-item__btn {
+  margin-top: 22px;
+  justify-content: center;
+  width: 100%;
+  --height: 44px;
+  color: var(--primary-color);
+  font-family: var(--main-font);
+}
+.pricing-item__btn-recomemt{
+  color: #fff;
+  background: var(--primary-color);
+}
+.pricing-item__list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+.pricing-item__item {
+  display: flex;
+  column-gap: 12px;
+  color: var(--primary-color-text);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1; /* 100% */
+}
+.pricing-item__item i {
+  color: var(--primary-color);
+}
+:nth-child(n + 4 of .pricing-item__item) i {
+  color: rgba(255, 91, 46, 0.4);
 }
