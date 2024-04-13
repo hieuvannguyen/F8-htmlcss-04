@@ -23,6 +23,9 @@
   --staff-2-url: url("../img/mem-2.svg");
   --staff-3-url: url("../img/mem-3.svg");
   --staff-4-url: url("../img/mem-4.svg");
+
+  /* Blog color */
+  --bg-img: ;
 }
 
 html {
